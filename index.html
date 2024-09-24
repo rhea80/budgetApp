@@ -1,0 +1,13 @@
+<h1>Budget App</h1>
+<form action="/add_expense" method="POST">
+  <input type="number" name="amount" placeholder="Amount">
+  <input type="text" name="category" placeholder="Category">
+  <button type="submit">Add Expense</button>
+</form>
+
+<h3>Expenses</h3>
+<ul>
+  {% for expense in expenses %}
+    <li>{{ expense.category }}: ${{ expense.amount }}</li>
+  {% endfor %}
+</ul>
